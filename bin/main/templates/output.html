@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>出力ページ</title>
+</head>
+<body>
+    <form th:action="@{/input}" th:object="${demoForm}" method="post">
+        <div th:object="${demoForm}">
+            <p>
+                名前：<span th:text="*{name}"></span>
+            </p>
+            <p>
+                電話番号：<span th:text="*{tel}"></span>
+            </p>
+            <p>
+                <input type="submit" value="入力画面へ戻る" />
+            </p>
+        </div>
+    </form>
+</body>
+</html>
